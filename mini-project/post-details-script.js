@@ -7,7 +7,11 @@ let url = new URL(location.href);
 let post = JSON.parse(url.searchParams.get('data'));
 
 let postDiv = document.getElementsByClassName('post')[0];
-postDiv.innerHTML = `${JSON.stringify(post)}`;
+postDiv.innerHTML = `
+UserId:${JSON.stringify(post.userId)}<br>
+ID:${JSON.stringify(post.id)}<br>
+Title:${JSON.stringify(post.title)}<br>
+Body:${JSON.stringify(post.body)}<br>`;
 
 let comments = document.getElementsByClassName('comments')[0];
 fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)

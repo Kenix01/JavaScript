@@ -9,7 +9,15 @@ let url = new URL(location.href);
 let user = JSON.parse(url.searchParams.get('data'));
 
 let userDetailDiv = document.getElementsByClassName('user-details')[0];
-userDetailDiv.innerHTML = `${JSON.stringify(user)}`;
+userDetailDiv.innerHTML = `ID:${JSON.stringify(user.id)}<br>
+Name:${JSON.stringify(user.name)}<br>
+Username:${JSON.stringify(user.username)}<br>
+Email:${JSON.stringify(user.email)}<br>
+Address:${JSON.stringify(user.address)}<br>
+Phone:${JSON.stringify(user.phone)}<br>
+Website:${JSON.stringify(user.website)}<br>
+Company:${JSON.stringify(user.company)}<br>`;
+
 let button = document.getElementsByClassName('user-posts-button')[0];
 let posts = document.getElementsByClassName('posts')[0];
 
