@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userBlock {
+    background: gray;
+
+    width: 200px;
+    height: 100px;
+
+    margin: 10px;
+    margin-left: calc(25% - 100px);
+    margin-right: calc(25% - 100px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.userButton {
+    margin-top: 15px;
+}
